@@ -3,7 +3,8 @@ import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const API_BASE_URL = "http://localhost:2006/api/users";
+const API_BASE_URL =
+  "https://finalprojectbackend-production-bb71.up.railway.app/api/users";
 
 const ProfileManager = () => {
   // State for form data and UI mode

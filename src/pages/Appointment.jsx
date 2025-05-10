@@ -90,7 +90,7 @@ const Appointment = () => {
     try {
       if(isLoggedIn){
       const response = await axios.post(
-        "http://localhost:2006/api/appointments/book",
+        "https://finalprojectbackend-production-bb71.up.railway.app/api/appointments/book",
         appointmentData
       );
    

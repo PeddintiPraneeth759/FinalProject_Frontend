@@ -12,7 +12,7 @@ const MyAppointment = () => {
   const fetchAppointments = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:2006/api/appointments"
+        "https://finalprojectbackend-production-bb71.up.railway.app/api/appointments"
       );
       setAppointments(response.data);
     } catch (error) {
@@ -23,7 +23,7 @@ const MyAppointment = () => {
   const handlePayment = async (amount, doctorName) => {
     try {
       const response = await axios.post(
-        "http://localhost:2006/api/payment/create-order",
+        "https://finalprojectbackend-production-bb71.up.railway.app/api/payment/create-order",
         null,
         {
           params: { amount },
@@ -69,7 +69,9 @@ const MyAppointment = () => {
     if (!confirm) return;
 
     try {
-      await axios.delete(`http://localhost:2006/api/appointments/${id}`);
+      await axios.delete(
+        `https://finalprojectbackend-production-bb71.up.railway.app/api/appointments/${id}`
+      );
       // filter out the cancelled appointment
       setAppointments((prev) => prev.filter((a) => a.id !== id));
     } catch (error) {
