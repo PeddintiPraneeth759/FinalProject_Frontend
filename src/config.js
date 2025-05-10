@@ -1,5 +1,5 @@
 const config = {
-  "url": "http://localhost:2006"
+  "url": "https://finalprojectbackend-production-bb71.up.railway.app"
 }
 
 export default config;
